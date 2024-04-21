@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="Contacto.css">
+</head>
+<body>
+    <header>
+    
+      <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+        <a class="navbar-item" href="#">
+        <img class="navbar-logo" src="logo.png" alt="Logo">
+      </a>  
+      <div class="container">
+          <div class="navbar-brand">
+            <a class="navbar-item" href="#">Inicio</a>
+            <a class="navbar-item" href="#">Sobre Nosotros</a>
+            <a class="navbar-item" href="#">Servicios</a>
+          </div>
+        </div>
+      </nav>      
+    </header>
+    <section class="section">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column is-half">
+            <div class="box">
+              <h2 class="title is-4 has-text-centered">Contacto</h2>
+              <form id="contact-form" method="post" action="#">
+                <div class="field">
+                  <label class="label">Nombre</label>
+                  <div class="control">
+                    <input class="input" type="text" name="name" placeholder="Nombre" required>
+                  </div>
+                </div>
+                <div class="field">
+                  <label class="label">Email</label>
+                  <div class="control">
+                    <input class="input" type="email" name="email" placeholder="Email" required>
+                  </div>
+                </div>
+                <div class="field">
+                  <label class="label">Mensaje</label>
+                  <div class="control">
+                    <textarea class="textarea" name="message" placeholder="Mensaje" required></textarea>
+                  </div>
+                </div>
+                <div class="field is-grouped is-grouped-centered">
+                  <div class="control">
+                    <button class="button is-primary" type="submit">Enviar</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column is-half">
+            <p>Síguenos en:</p>
+            <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body> 
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</html>
