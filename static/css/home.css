@@ -1,0 +1,391 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+body{
+    /* background-image: linear-gradient(rgb(0, 0, 0), rgb(71,166,162),rgb(209,163,169));
+    background-repeat: no-repeat; */
+    background-color: #000000;
+}
+header{
+    width: 100%;
+    height: 80px;
+    background-image: linear-gradient(rgb(0, 0, 0), rgb(204,169,221));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 100px;    
+}
+menu {
+    padding: 20px;
+}
+.barra{
+    display: none; 
+    
+}
+
+.nav-bar ul{
+    display:flex ;  
+}
+
+.nav-bar ul li a{
+    display: block;
+    /* background-color: black; */
+    /* background-image: linear-gradient(rgb(0, 0, 0), rgb(71,166,162),rgb(209,163,169)); */
+    background-color: white;
+    color: rgb(1, 14, 13);
+    font-size: 18px;
+    padding: 10px 25px;
+    border-radius: 10px;
+    transition: 0.2s;
+    margin: 0 5px;   
+    justify-items: center;
+    align-items: center;
+    box-shadow: 0px 1px 5px rgba(0,0,0,3);
+}
+
+.nav-bar ul li a.active:hover{
+    color: rgb(15, 1, 1);
+    background-color: rgb(204,169,221);
+    
+} 
+/* BOTON FLOTANTE WHATSAPP */
+.btn-wsp{
+    position: fixed;
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    bottom: 30px;
+    right: 30px;
+    background: green;
+    color: #fff;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 0px 1px 10px rgba(0,0,0,3);
+    z-index: 100;
+
+}
+.btn-wsp:hover{
+    background: #fff;
+    color: green;
+}
+/* FIN BOTON FLOTANTE */
+
+.main{
+    justify-items: end;
+}
+/* Tablet */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .barra{
+        display: block;
+        cursor: pointer;        
+    }
+    .barra .line{
+        width: 30px;
+        height: 3px;
+        background-color: rgb(23, 29, 34);
+        margin: 6px 0px;
+    }
+
+    .nav-bar{
+        height: 0;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        background-color:rgba(193, 193, 211, 0.333) ;
+        transition: 0.5s;
+        overflow: hidden;
+        z-index: 1000;
+    }
+    .nav-bar.active{
+        height: 450px; 
+    }
+    .nav-bar ul{
+        display: block;
+        width: fit-content;
+        margin: 80px auto 0 auto;
+        text-align: center;
+        transition: 0.5s;
+        opacity: 0;
+    }
+    .nav-bar.active ul{
+        opacity: 3;
+    }
+    .nav-bar ul li a{
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 767px){
+    header{
+        padding: 0px 30px ;
+        
+    }
+    .barra{
+        display: block;
+        cursor: pointer;
+        
+    }
+    .barra .line{
+        width: 30px;
+        height: 3px;
+        background-color: rgb(23, 29, 34);
+        margin: 6px 0px;
+    }
+
+    .nav-bar{
+        height: 0;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        background-color:rgba(193, 193, 211, 0.333) ;
+        transition: 0.5s;
+        overflow: hidden;
+        z-index: 1000;
+    }
+    .nav-bar.active{
+        height: 450px; 
+    }
+    .nav-bar ul{
+        display: block;
+        width: fit-content;
+        margin: 80px auto 0 auto;
+        text-align: center;
+        transition: 0.5s;
+        opacity: 0;
+    }
+    .nav-bar.active ul{
+        opacity: 3;
+    }
+    .nav-bar ul li a{
+        margin-bottom: 20px;
+    }
+}
+.titulo {
+    font-size: 200%;
+    text-align: center;
+    font-style: italic;
+    
+}
+.titulo {
+    font-size: 3em;
+    color: #318691;
+    font-style: italic;
+    font-weight: bold; /* Aplica negrita al texto */
+    text-shadow: 
+    -1px -1px 0 #fff,  
+    1px -1px 0 #fff,
+    -1px  1px 0 #fff,
+    1px  1px 0 #fff; /* Crea un efecto de borde blanco */
+    animation: cambioColor 6s ease-in-out infinite; 
+    
+}
+
+@keyframes cambioColor {
+    0% {
+      color: #314691(147, 35, 169); /* Color inicial */
+    }
+    50% {
+      color: #6f3191; /* Cambia a azul a la mitad de la animación */
+    }
+    100% {
+      color: #318691; /* Color final */
+    }
+}
+.unisex {
+    background-color: black; /* Verde */
+    border: 5px solid #318691;
+    border-radius: 10px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 10px;
+    cursor: pointer;
+    width: 48%; /* Ajusta según sea necesario para el diseño */
+}
+.barber {
+    background-color: black; /* Verde */
+    border: 5px solid #318691;
+    border-radius: 10px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 10px;
+    cursor: pointer;
+    width: 48%; /* Ajusta según sea necesario para el diseño */
+}
+.nosotros {
+    background-color: black; /* Verde */
+    border: 5px solid #318691;
+    border-radius: 10px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 10px;
+    cursor: pointer;
+    width: 48%; /* Ajusta según sea necesario para el diseño */
+}
+.contactanos{ 
+    background-color: black; /* Verde */
+    border: 5px solid #318691;
+    border-radius: 10px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 10px;
+    cursor: pointer;
+    width: 48%; /* Ajusta según sea necesario para el diseño */
+}
+.botonera {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.secciones img {
+    width: 80%;
+    height: auto;
+    
+}
+.secciones img:hover {
+    transform: scale(1.1);
+}
+
+.secciones h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.secciones p {
+    font-size: 1em;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .unisex {
+        width: 100%;
+    }
+    .barber {
+        width: 100%;
+    }
+    .nosotros {
+        width: 100%;
+    }
+    .contactanos {
+        width: 100%;
+    }
+}
+.mapa {
+    text-align: center;
+    height: auto;
+    font-size: 1.5em;
+    
+}
+.mapa-google{
+    text-align: center;
+    height: auto;
+    
+}
+@media (max-width: 768px) {
+    .mapa-google {
+        width: 100%;
+        text-align: center;
+        height: auto;
+        
+    }
+}
+
+.ubicacion {
+    font-size: 100%;
+    text-align: center;
+    font-style: italic;
+    
+}
+.ubicacion {
+    font-size: 3em;
+    color: #318691;
+    font-style: italic;
+    font-weight: bold; /* Aplica negrita al texto */
+    text-shadow: 
+    -1px -1px 0 #fff,  
+    1px -1px 0 #fff,
+    -1px  1px 0 #fff,
+    1px  1px 0 #fff; /* Crea un efecto de borde blanco */
+    animation: cambioColor 6s ease-in-out infinite; 
+    
+}
+
+@keyframes cambioColor {
+    0% {
+      color: #314691(147, 35, 169); /* Color inicial */
+    }
+    50% {
+      color: #6f3191; /* Cambia a azul a la mitad de la animación */
+    }
+    100% {
+      color: #318691; /* Color final */
+    }
+}
+/* FOOTER */
+
+.footer{
+    background-color: rgb(153, 107, 115);;
+    display: grid;
+}
+.text-footer{
+    color: rgb(232, 229, 230);
+    padding: 10px;
+}
+.footer .copyright{
+    padding: 10px;
+    margin: 10px;
+    color: #fbe8dc;
+}
+.footer .footer-icons{ 
+    padding: 5px;
+    width:100%; 
+    float:left; 
+    margin-bottom:20px; 
+}
+.footer .footer-icons a { 
+    display: inline-block; 
+    width: 50px; 
+    height: 50px; 
+    line-height: 50px;
+    cursor: pointer; 
+    background-color: #fbe8dc; 
+    border-radius: 50px; 
+    font-family:'DM Sans', sans-serif; 
+    font-size: 30px; 
+    color: #f29456; 
+    text-align: center; 
+    text-decoration:none; 
+    margin-bottom: 5px; 
+    transition:0.2s; 
+    margin: 10px;
+}
+.footer .footer-icons a:hover { 
+    background-color: #f0eaea; 
+    color: #0f0601; 
+}
