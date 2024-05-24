@@ -3,74 +3,156 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
-    <link rel="stylesheet" href="Contacto.css">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="./static/css/Contacto.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+
 </head>
-<body>
+<body  background-color="#fbe3e3" >
     <header>
-    
-      <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
-        <a class="navbar-item" href="#">
-        <img class="navbar-logo" src="logo.png" alt="Logo">
-      </a>  
-      <div class="container">
-          <div class="navbar-brand">
-            <a class="navbar-item" href="#">Inicio</a>
-            <a class="navbar-item" href="#">Sobre Nosotros</a>
-            <a class="navbar-item" href="#">Servicios</a>
-          </div>
-        </div>
-      </nav>      
-    </header>
-    <section class="section">
-      <div class="container">
-        <div class="columns is-centered">
-          <div class="column is-half">
-            <div class="box">
-              <h2 class="title is-4 has-text-centered">Contacto</h2>
-              <form id="contact-form" method="post" action="#">
-                <div class="field">
-                  <label class="label">Nombre</label>
-                  <div class="control">
-                    <input class="input" type="text" name="name" placeholder="Nombre" required>
-                  </div>
-                </div>
-                <div class="field">
-                  <label class="label">Email</label>
-                  <div class="control">
-                    <input class="input" type="email" name="email" placeholder="Email" required>
-                  </div>
-                </div>
-                <div class="field">
-                  <label class="label">Mensaje</label>
-                  <div class="control">
-                    <textarea class="textarea" name="message" placeholder="Mensaje" required></textarea>
-                  </div>
-                </div>
-                <div class="field is-grouped is-grouped-centered">
-                  <div class="control">
-                    <button class="button is-primary" type="submit">Enviar</button>
-                  </div>
-                </div>
-              </form>
+        <div class="barra">
+            <div class="line">
             </div>
-          </div>
+            <div class="line">
+            </div>
+            <div class="line">
+            </div>
         </div>
-      </div>
-    </section>
+
+    <nav class="nav-bar">
+        <ul>
+            <li>
+                <a href="./home.html" class="active">Inicio</a>
+            </li>
+            <li>
+                <a href="./barber-index.html" class="active">Barberia</a>
+            </li>
+            <li>
+                <a href="./Contacto.html" class="active">Contacto</a>
+            </li>
+            <li>
+                <a href="./seccionServicios.html" class="active">Nosotros</a>
+            </li>
+            <li>
+                <a href="http://api.whatsapp.com/send?phone=+5491140363989" class="active" target="_blank" rel="noopener noreferrer">Turnos</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<div class="contain">
+<div class="form">
+    <h3>Contactate con nosotros!</h3>
+    <form action="" id="contactForm" enctype="multipart/form-data">
+        <p>
+            <label for="nombre">Nombre</label>
+            <input type="text" id="firstname" required>
+            <div id="error-firstname" class="error-msg"></div>
+        </p>
+        <p>
+            <label for="apellido">Apellido</label>
+            <input type="text" id="lastname" required>
+            <div id="error-lastname" class="error-msg"></div>
+        </p>
+        <p>
+            <label for="email">Email</label>
+            <input type="email" id="email" required>
+            <div id="error-email" class="error-msg"></div>
+        </p>
+        <p>
+            <label for="telefono">Numero de Telefono</label>
+            <input type="tel" id="telefono" required>
+            <div id="error-telefono" class="error-msg"></div>
+        </p>
+        <p>
+            <label for="consulta">Escribe tu consulta o duda</label>
+            <textarea id="consulta" required></textarea>
+            <div id="error-consulta" class="error-msg"></div>
+        </p>
+        <p>
+            <label for="select">Motivo de contacto</label>
+            <select id="motivo" required>
+                <option value="">Selecciona un motivo</option>
+                <option value="Consulta">Consulta</option>
+                <option value="Sugerencia">Sugerencia</option>
+                <option value="Reclamo">Reclamo</option>
+            </select>
+        </p>
+        <p>
+            <label for="imagen">Adjuntar imagen</label>
+                <input type="file" id="imagen" accept="image/*" required>
+            </p>
+            <div >
+            <label for="checkbox">Acepto los términos y condiciones</label>
+            <input type="checkbox" id="acepto" required>
+        </div>
+
+            <p class="full-width">
+            <button type="submit">Enviar</button>
+            </p>
+        </div>
+        </form>
+    </div>
+    <a href="http://api.whatsapp.com/send?phone=+5491140363989" class="btn-wsp" target="_blank">
+    <i class="grve-text-black fab fa-whatsapp"></i>
+    </a>
+
     <footer class="footer">
-      <div class="container">
-        <div class="columns is-centered">
-          <div class="column is-half">
-            <p>Síguenos en:</p>
-            <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-          </div>
+		
+    <div class="footer-icons">
+        <h6 class="text-footer">
+            CONTACTANOS
+        </h6>
+        <a href="https://www.facebook.com/people/EstiloLibreestudio/100087392505693/?%20%20%20%20id=100087392505693" target="_blank"  aria-label="facebook"
+        style="background-color: blue; 
+        color: white;">
+        <i class="grve-text-black fab fa-facebook-f"></i>
+        
+        </a>
+        <a href="https://www.instagram.com/estilo.libre.estudio/" target="_blank" aria-label="instagram" style="background-color: red; color: white;">
+        <i class="grve-text-black fab fa-instagram"></i>    
+        
+        </a>
+        <a href="https://www.tiktok.com/@estilo.libre.estudio" target="_blank" aria-label="tiktok" style="background-color: black; color: white;">
+        <i class="grve-text-black fab fa-tiktok"></i> 
+            
+        </a>
+    </div>
+    
+    <div style="margin: 20px;">
+        <p class="fot"><strong>Horarios</strong> </p>
+    </div>
+        
+        <div >
+        
+            <div class="fot">
+                <p>Lunes a Viernes</p>
+                <p>9:00 hs - 19:00 hs</p>
+            </div>
+            <div class="fot">              
+                <p>Sabados</p>
+                <p>10:00 hs - 20:00 hs</p>
+            </div>
+            <div class="fot">
+                <p>Domingos</p>
+                <p>10:00 hs - 13:00 hs</p>
+            </div>        
         </div>
-      </div>
-    </footer>
-  </body> 
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <div class ="direccion">
+        <div style="margin: 20px;">
+            <p><strong>Dirección</strong></p>
+            <br>
+            <p>San Jorge 406</p>
+            <p>Claypole, Buenos Aires</p>
+        </div>
+        <p class="copyright">&copy; Copyright Estilo Libre Estudio - 2024</p>
+    </div>
+</footer>
+
+<script src="./static/js/Contacto.js"></script>
+</body>
+
 </html>
